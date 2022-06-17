@@ -25,8 +25,9 @@ setTimeout(userValue, 30000)
             // Tutti i numeri che mi da l'utente li pusho in un array apposito
             userArrayNumbers.push(userNumbers);
             // Se il numero dato dal utente è nel array dei numeri generati random
-              // Pusho in un array conteneti i numeri azzeccati dal utente
-            if (alertArrayNumbers.includes(userNumbers)) {
+              // Pusho in un array contenenti i numeri azzeccati dal utente
+              // Se l'utente inserisce i duplicati non lo pusho nel array dei numeri azzeccati
+            if (alertArrayNumbers.includes(userNumbers) && !userArrayNumberGuess.includes(userNumbers)) {
                 userArrayNumberGuess.push(userNumbers);
                 
             }     
@@ -34,7 +35,7 @@ setTimeout(userValue, 30000)
         }
 
         // Comunico il risulto di quanti e quali numeri ha azzeccato l'utente
-        alert('Hai indovino ' + '' + userArrayNumberGuess.length + 'numeri. E i numeri sono ' + '' + userArrayNumberGuess  )  
+        alert('Hai indovino ' + '' + userArrayNumberGuess.length + 'numeri. E i numeri sono ' + '' + userArrayNumberGuess);  
         console.log(userArrayNumbers);
         console.log(userArrayNumberGuess);  
                
